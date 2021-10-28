@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var maind = document.createElement("div");
+        maind.setAttribute('class', 'main_div');
+        document.body.appendChild(maind);
+        var x = document.getElementsByClassName("main_div");
+        //console.log(x[0]);
+        x[0].style.width = "500px";
+        x[0].style.height = "500px";
+        x[0].style.backgroundColor = "pink";
+        x[0].style.border = "2px solid black";
+        x[0].style.margin = "auto";
+
+        /*------------111111---------------------*/
+        var b1 = document.createElement("div");
+        b1.setAttribute('class', 'box1');
+        maind.appendChild(b1);
+        var b11 = document.getElementsByClassName("box1");
+        //console.log(b11);
+        b11[0].style.width = "250px";
+        b11[0].style.height = "250px";
+        b11[0].style.backgroundColor = "skyblue";
+        b11[0].style.border = "1px solid black";
+        b11[0].style.float = "right";
+
+        var b123 = document.createElement("div");
+        b1.appendChild(b123);
+        b123.setAttribute('class', 'box1c')
+        var b1111 = document.getElementsByClassName("box1c");
+        //console.log(b111[0]);
+        b1111[0].style.width = "250px";
+        b1111[0].style.height = "250px";
+        b1111[0].style.backgroundColor = "#D39115";
+        b1111[0].style.border = "2px solid black";
+        b1111[0].style.borderTopRightRadius = "250px";
+
+        /*------------222222---------------------*/
+
+        var c1 = document.createElement("div");
+        maind.appendChild(c1);
+        c1.setAttribute('class', 'box2');
+        maind.appendChild(c1);
+        var c11 = document.getElementsByClassName("box2");
+        //console.log(c11);
+        c11[0].style.width = "250px";
+        c11[0].style.height = "250px";
+        c11[0].style.backgroundColor = "#C1BE07";
+        c11[0].style.border = "1px solid black";
+        //c11[0].style.float="left";
+
+        var c123 = document.createElement("div");
+        c1.appendChild(c123);
+        c123.setAttribute('class', 'box2c')
+        var c1111 = document.getElementsByClassName("box2c");
+        //console.log(b111[0]);
+        c1111[0].style.width = "250px";
+        c1111[0].style.height = "250px";
+        c1111[0].style.backgroundColor = "red";
+        c1111[0].style.border = "2px solid black";
+        //c1111[0].style.borderTopleftRadius="250px";
+        c1111[0].style.borderTopLeftRadius = "250px";
+        /*------------33333---------------------*/
+
+        var d1 = document.createElement("div");
+        maind.appendChild(d1);
+        d1.setAttribute('class', 'box3');
+        var d11 = document.getElementsByClassName("box3");
+        //console.log(d11);
+        d11[0].style.width = "250px";
+        d11[0].style.height = "250px";
+        d11[0].style.backgroundColor = "purple";
+        d11[0].style.border = "1px solid black";
+        d11[0].style.float = "right";
+
+        var d123 = document.createElement("div");
+        d1.appendChild(d123);
+        d123.setAttribute('class', 'box3c');
+        var d1111 = document.getElementsByClassName("box3c");
+        //console.log(b111[0]);
+        d1111[0].style.width = "250px";
+        d1111[0].style.height = "250px";
+        d1111[0].style.backgroundColor = "#1C38D6";
+        d1111[0].style.border = "2px solid black";
+        d1111[0].style.borderBottomRightRadius = "250px";
+        
+        //d1111[0].style.borderTopRightRadius="125px";
+
+        /*------------44444---------------------*/
+        var e1 = document.createElement("div");
+        maind.appendChild(e1);
+        e1.setAttribute('class', 'box4');
+        var f11 = document.getElementsByClassName("box4");
+        //console.log(f11);
+        f11[0].style.width = "250px";
+        f11[0].style.height = "250px";
+        f11[0].style.backgroundColor = "#50DB42";
+        f11[0].style.border = "1px solid black";
+        //f11[0].style.float="left";
+
+        var f123 = document.createElement("div");
+        e1.appendChild(f123);
+        f123.setAttribute('class','box4c');
+        var f1111 = document.getElementsByClassName("box4c");
+        //console.log(b111[0]);
+        f1111[0].style.width = "250px";
+        f1111[0].style.height = "250px";
+        f1111[0].style.backgroundColor = "#1CACD6";
+        f1111[0].style.border = "2px solid black";
+        f1111[0].style.borderBottomLeftRadius = "250px";
+
+    </script>
+</body>
+
+</html>

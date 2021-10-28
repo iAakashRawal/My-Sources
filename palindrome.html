@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Number</title>
+</head>
+
+<body>
+    Aakash
+    <script>
+        parent._alert = new parent.Function("alert(arguments[0]);");
+        parent._alert('Akash!');
+        var x = prompt("");
+
+        var num = x;
+        var originalNum = num;
+        var reverse = 0;
+        
+        while (num != 0) {
+            reverse = (reverse * 10) + (num % 10);
+            num = parseInt(num / 10);
+            //console.log(reverse, num);
+        }
+        if (originalNum == reverse) {
+            alert(reverse + " is palindrome Number");
+        } else {
+            alert(reverse + " not a palindrom number");
+        }
+    </script>
+</body>
+
+</html>

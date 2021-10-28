@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="mybody">
+    <script>
+        let h = document.createElement('header');
+        //console.log(h);
+        //Give text in tag
+        h.innerHTML="Header";
+        // set created element in boy by appendChild
+        document.getElementById("mybody").appendChild(h);
+        // Give class name of Tag
+        document.querySelector("header").setAttribute('class','a_header');
+
+        var x = document.getElementsByClassName("a_header");
+        //console.log(x);
+
+        x[0].style.width ="100%";
+        x[0].style.height ="60px";
+        x[0].style.border ="5px solid black";
+        x[0].style.textAlign ="center";
+        x[0].style.color ="green";
+        x[0].style.fontSize ="3em";
+
+        let n = document.createElement("nav");
+        n.innerHTML ="NAV";
+        document.body.appendChild(n);
+
+        let aside1 = document.createElement('aside1');
+        aside1.innerHTMasideL = "aside1";
+        document.body.appendChild(aside1);
+
+        let section = document.createElement('section');
+        section.innerHTML = "section";
+        document.body.appendChild(section);
+
+        let aside2 = document.createElement('aside2')
+        aside2.innerHTML = "aside2";
+        document.body.appendChild(aside2);  
+
+        let f = document.createElement("footer"); 
+        f.innerHTML ="FOOTER";
+        document.body.appendChild(f);
+  
+
+        var arr = document.querySelectorAll("aside");
+        console.log(arr);
+        arr.forEach(function(currentValue, index , arr){
+            arr[index].style.display ="inline-block";
+        });
+
+        let y = document.querySelectorAll('nav');
+        //console.log(y[0]);
+
+        y[0].setAttribute('data-aki','nav1');
+
+        document.querySelector("nav[data-aki='nav1']").style.textAlign="center";
+        document.querySelector('[data-aki="nav1"]').style.color="green";
+        document.querySelector("[data-aki]").style.lineHeight ="60px";
+        document.querySelector('[data-aki]').style.fontSize ="3em";
+
+        var ff = document.querySelector("nav");
+        ff.style.width="100%";
+        ff.style.height="60px";
+        ff.style.border="5px solid black"; 
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        document.body.style.backgroundColor = "orange";
+        let h = document.createElement("header");
+        h.innerHTML = "Simple Interest";
+        document.body.appendChild(h);
+
+        document.querySelector("header").setAttribute('class', 'a_header');
+
+        let x = document.getElementsByClassName("a_header");
+        //console.log(x[0]);
+
+        x[0].style.width = "35%";
+        x[0].style.height = "80px";
+        //x[0].style.border="2px solid black";
+        x[0].style.textAlign = "center";
+        x[0].style.fontSize = "2em";
+        x[0].style.lineHeight = "80px";
+        x[0].style.color = "blue";
+        x[0].style.marginTop = "100px";
+        x[0].style.backgroundColor = "#33b5e5";
+        x[0].style.marginLeft="33%";
+        x[0].style.borderRadius = "30px 30px 0px 0px";
+        //x[0].style.backgroundColor="pink";
+
+        /*
+        let b = document.createElement("button");
+        b.innerHTML="click me";
+        document.body.appendChild(b);
+        
+        var be =document.getElementsByTagName("button");
+        //console.log(be);
+
+        be[0].addEventListener('click',function(){
+            //alert("hye Aaakash");
+            h.style.color="black";
+        }); 
+        */
+
+        var form = document.createElement("form");
+        var name1 = document.createElement("input");
+        var lname1 = document.createElement("input");
+        var mobile = document.createElement("input");
+        var btn = document.createElement("button");
+        var br0 = document.createElement("br");
+        var br1 = document.createElement("br");
+        var br2 = document.createElement("br");
+        var br3 = document.createElement("br");
+        var br4 = document.createElement("br");
+        var br5 = document.createElement("br");
+        
+
+
+        name1.innerHTML = "Name";
+        name1.setAttribute('type', 'text');
+        name1.setAttribute('placeholder', 'Capital');
+        name1.setAttribute('id', 'mny');
+
+        lname1.setAttribute('type', 'Rate');
+        lname1.setAttribute('placeholder', 'Rate');
+        lname1.setAttribute('id', 'rt');
+
+        mobile.setAttribute('type', 'text');
+        mobile.setAttribute('placeholder', 'Time');
+        mobile.setAttribute('id', 'tm');
+
+
+        btn.setAttribute('type', "submit");
+        btn.innerHTML = "click me";
+
+        //console.log(name);
+
+        //let money = document.getElementsByName()
+
+        document.body.appendChild(form);
+        //form.innerHTML="Name";
+        form.appendChild(name1);
+        form.appendChild(br0);
+        form.appendChild(br1);
+
+        //form.innerHTML="Last Name";
+        form.appendChild(lname1);
+        form.appendChild(br2);
+        form.appendChild(br3);
+
+        // form.innerHTML="Contact"
+        form.appendChild(mobile);
+        form.appendChild(br4);
+        form.appendChild(br5);
+
+        form.appendChild(btn);
+        form.setAttribute('onsubmit','return myFunction()');
+        //console.log(form);
+
+        let form1 = document.getElementsByTagName("form");
+        //console.log(form1);
+
+        function myFunction() {
+            let money1 = document.getElementById("mny").value;
+            let rate1 = document.getElementById("rt").value;
+            let time1 = document.getElementById("tm").value;
+
+            let total = parseInt(money1) * parseInt(rate1) * parseInt(time1) / 100;
+            let total1 = parseInt(total) * 12;
+            let ci = parseInt(total1) + parseInt(money1);
+            result = "Your 1st Year Interest "+total1+ " || Capital With interest "+ci;
+            //$(".content").toggle();
+
+            document.querySelector('.lines').innerHTML = result;
+
+            return false;
+        }
+
+        form1[0].style.width = "30%";
+        form1[0].style.padding = "30px";
+        form1[0].style.textAlign= "center";
+        form1[0].style.marginLeft = "33%";
+        form1[0].style.height = "130px";
+        form1[0].style.marginTop = "5px";
+        form1[0].style.lineHeight = "10px";
+        form1[0].style.backgroundColor = "pink";
+        form1[0].style.borderRadius = "5px 5px 5px 5px";
+
+        
+        var ppp = document.createElement("div");
+        document.body.appendChild(ppp);
+        ppp.setAttribute('class','content');
+        var p1 = document.getElementsByClassName("content");
+        console.log(p1[0]);
+        p1[0].style.width="33%";
+        p1[0].style.height="100px";
+        p1[0].style.marginTop="5px";
+        p1[0].style.marginLeft="33%";
+        p1[0].style.backgroundColor="#33b5e5";
+        p1[0].style.zIndex="100";
+        p1[0].style.padding="10px";
+        p1[0].style.borderRadius="0px 0px 30px 30px";
+
+        //p1[0].style.display="none";
+
+        var prgf = document.createElement("p");
+        ppp.appendChild(prgf);
+        prgf.setAttribute('class','lines');
+        var line1 = document.getElementsByClassName('lines');
+        console.log(line1);
+        line1[0].style.width="100%";
+        line1[0].style.height="30px";
+        line1[0].style.padding="0px";
+        line1[0].style.backgroundColor="white";
+        line1[0].style.size="50";
+        line1[0].style.textAlign="Center";
+        line1[0].style.lineHeight="30px";
+        line1[0].style.color="blue";
+        line1[0].style.borderRadius="13px 13px 13px 13px";
+
+
+        var result = '';//JS Hoisting
+    </Script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div[data-akash="myfan"] {
+            border: 2px solid black;
+            border-radius: 250px;
+        }
+        .main {
+            padding: auto;
+            background-color: #c5e2c2;
+            width: 420px;
+            height: 600px;
+            border: 5px solid black;
+            margin-left: 400px;
+            border-radius: 40px 40px 0px 0px;
+        }
+        .fanbox {
+            width: 400px;
+            height: 400px;
+            background-color: #fff;
+            background-image: url("img/fan.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 8px;
+            animation-name: circle;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+        }
+        @keyframes circle {
+            0% {
+                transform: rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateZ(359deg);
+            }
+        }
+        .btns {
+            width: 400px;
+            height: 30px;
+            margin: 0px;
+            padding: 0px;
+        }
+        #c{
+            margin-right: 60px;
+        }
+        #fs{
+            margin-left: 100px;
+        }
+        .btns>button:first-child {
+            width: 150px;
+            background-color: #c5e2c2;
+            border: none;
+            height: 63px;
+            padding: 20px 20px;
+            background-image: url(img/button.png);
+            background-repeat: no-repeat;
+            background-size: 150px 150px;
+            background-position: 0px -14px;
+        }
+        .ss{
+            font-size:2em;
+            color: brown;
+            padding-left: 150px;
+            font-family:fantasy;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="ss">Sky SHop</div>
+        <div class="btns">
+            <button id="c" onclick="startFan(0)"></button>
+            <button id="fs" onclick="startFan(1)">1</button>
+            <button onclick="startFan(2)">2</button>
+            <button onclick="startFan(3)">3</button>
+        </div><br><br>
+        <div class="fanbox" id="fanboxx" data-akash="myfan"></div>    
+    </div>
+    <script>
+        function a(elem) {
+            return document.getElementById(elem);
+        }
+        function startFan(speed) {
+            if (speed == 0) {
+                a("fanboxx").style.animationPlayState = "paused";
+                a('c').style.backgroundPosition = "0px -14px";
+            } else if (speed == 1) {
+                //alert(1);
+                a("fanboxx").style.animationPlayState = "running";
+                a("fanboxx").style.animationDuration = "5s"
+                a('c').style.backgroundPosition = "0px -78px";
+                //document.querySelector()
+            } else if (speed == 2) {
+                //alert('2');
+                //a("fanboxx").style.animationPlayState='running';
+                //a("fanboxx").style.animationDuration='3s';
+
+                document.querySelector('[data-akash="myfan"]').style.animationPlayState = 'running';
+                document.querySelector('[data-akash="myfan"]').style.animationDuration = '3s';
+                a('c').style.backgroundPosition = "0px -78px";
+            } else {
+                //alert('3');
+                a("fanboxx").style.animationPlayState = "running";
+                a("fanboxx").style.animationDuration = '1s';
+                a('c').style.backgroundPosition = "0px -78px";
+            }
+        }
+    </script>
+</body>
+</html>

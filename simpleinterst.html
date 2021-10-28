@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = document.createElement("i");
+        i.setAttribute('class','fas');
+        i.classList.add('fa-circle');
+        document.body.appendChild(i);
+
+        var l = document.createElement("link");
+        l.setAttribute('rel','stylesheet');
+        l.setAttribute('href','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+        document.head.appendChild(l)
+        console.log(l);
+    </script>
+</body>
+</html>

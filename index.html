@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="submitForm()">
+        <input id="fn" type="text" name="fn">
+        <input data-n="sn" type="text" name="sn">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function submitForm(){
+            let number1= document.getElementById("fn").value;
+            var number2= document.querySelector('[data-n="sn"]').value;
+
+            //alert("Your number is "+ number1);
+            //alert("your number is "+ number2);
+            let total = parseInt(number1) + parseInt(number2);
+
+            alert("Your Addition is "+ total);
+
+            localStorage.setItem('mykey',total);
+        }
+    </script>
+</body>
+</html>

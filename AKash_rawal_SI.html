@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash</title>
+</head>
+
+<body>
+    <script>
+        /*--------------------------Head-----------------------------*/
+        let l = document.createElement("link");
+        let l2 = document.createElement("link");
+        
+        l.setAttribute('href', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
+        l.setAttribute('rel', 'stylesheet');
+        document.head.appendChild(l);
+
+        /*--------------------------Body-----------------------------*/
+        let box_main = document.createElement("div");
+        box_main.setAttribute('class', 'container');
+        document.body.appendChild(box_main);
+
+        let f = document.createElement("form");
+        let p = document.createElement("p");
+        let i1 = document.createElement("input");
+        let i2 = document.createElement("input");
+        let i3 = document.createElement("input");
+        let btn = document.createElement("button");
+        let btn1 = document.createElement("button");
+        let btn2 = document.createElement("button");
+        let p1 = document.createElement("p");
+
+        f.setAttribute('class', 'form');
+        f.setAttribute('onsubmit', 'return myFunction()');
+        f.classList.add('form-control');
+        //f.classList.add('w-50');
+        f.classList.add('mt-5');
+        f.classList.add('m-auto');
+        f.classList.add('shadow-lg');
+        f.classList.add('col-12');
+        f.classList.add('position-relative');
+
+        box_main.appendChild(f);
+
+        f.appendChild(p);
+
+        p.innerHTML = "Your Simple Interest";
+        p.setAttribute('class', 'fs-3');
+        p.classList.add('bg-warning');
+        p.classList.add('text-center');
+        p.classList.add('pt-5');
+
+        i1.setAttribute('class', 'form-control');
+        i1.setAttribute('placeholder', 'Capital');
+        i1.setAttribute('id', 'c');
+
+        i2.setAttribute('class', 'form-control');
+        i2.setAttribute('id', 'r');
+        i2.setAttribute('placeholder', 'rate');
+        i2.classList.add('mt-3');
+
+        i3.setAttribute('class', 'form-control');
+        i3.setAttribute('placeholder', 'Time');
+        i3.setAttribute('id', 't');
+        i3.classList.add('mt-3');
+
+        p1.setAttribute('class', 'fff');
+        p1.classList.add('bg-warning');
+        p1.classList.add('text-center');
+        p1.classList.add('mt-5');
+        p1.classList.add('text-success');
+        p1.classList.add('fs-5');
+
+        
+        // btn.setAttribute('class', 'btn');
+        // btn.setAttribute('value', 'submit');
+        // //btn.setAttribute('onlick', 'return myFunction()');
+        // btn.classList.add('btn-info');
+        // btn.classList.add('mt-4');
+        // btn.innerHTML = "check2";
+
+        btn1.setAttribute('class', 'btn12');
+        btn1.classList.add('btn');
+        btn1.classList.add('btn-primary');
+        btn1.classList.add('m-auto');
+        btn1.classList.add('position-absolute');
+        btn1.classList.add('top-75');
+        btn1.classList.add('start-50');
+        btn1.classList.add('start-50');
+        btn1.classList.add('mt-2');
+        btn1.innerHTML = "check";
+
+        console.log(btn1);
+
+        f.appendChild(i1);
+        f.appendChild(i2);
+        f.appendChild(i3);
+        //f.appendChild(btn); rt
+        f.appendChild(btn1);
+        //f.appendChild(btn2);
+        f.appendChild(p1);
+
+        function myFunction() {
+            let c1 = document.getElementById("c").value;
+            let r1 = document.getElementById("r").value;
+            let t1 = document.getElementById("t").value;
+
+            total = parseInt(c1) * parseInt(r1) * parseInt(t1) / 100 * 12;
+            //alert(result);
+            total1 = parseInt(c1) + parseInt(total);
+            result = "Interest " + total+"₹"+" || Capital With Interest " + total1+"₹";
+            document.querySelector(".fff").innerHTML = result;
+
+            
+            return false;
+        }
+        var result;
+
+
+        /*--------------------------Script-----------------------------*/
+
+        let script = document.createElement("script");
+        
+        script.setAttribute('src', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js');
+        document.body.appendChild(script);
+
+    </script>
+</body>
+
+</html>

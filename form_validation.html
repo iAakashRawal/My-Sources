@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .spans{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return myFunction()">
+        <h1>My Form</h1>
+        <input type="text" id="fname" name="namer" placeholder="Enter Your Name">
+        <span class="spans" id="fns"></span>
+        <br><br>
+        <input type="text" class="lname" name="lname" placeholder="Enter you Last name">
+        <span class="spans ls"></span>
+        <br><br>  
+        <input type="email" data-aksh="email" name="email" placeholder="Enter your Email">
+        <span class="spans" id="es"></span>
+        <br><br>
+        <button type="submit" >submit</button>
+    </form>
+    <script>
+        function myFunction(){
+            let fname = document.getElementById("fname").value;
+            let lname = document.querySelector(".lname").value;
+            let email = document.querySelector('[data-aksh="email"]').value;
+
+            //alert(fname);
+            //alert(lname);
+            //alert (email);
+             
+            //document.getElementById("lname").innerHTML="Plz Enter you name";
+            //document.getElementById("email").innerHTML="Plz Enter you name";
+            var isValid = true;
+            if(fname == ''){
+                //alert("where is your name");
+                document.getElementById("fns").innerHTML="Plz Enter you name";
+                isValid =false;
+            }
+            if( lname == ''){
+                document.querySelector(".ls").innerHTML="Plz Enter you name";
+                isValid = false;
+            }
+            if( email == ''){
+                document.querySelector("#es").innerHTML="Plz Enter you email address";
+                isValid = false;
+            }if(isValid == true){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        //return ;
+    </script>
+</body>
+</html>
